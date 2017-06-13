@@ -14,8 +14,8 @@ sudo apt-get install -y jq
 HUB_DOWNLOAD_URL=$(curl -s https://api.github.com/repos/github/hub/releases/latest | jq -r ".assets[].browser_download_url" | grep linux-amd64)
 
 wget -qO- $HUB_DOWNLOAD_URL | tar -zxv
-cd hub*
-sudo ./install
+cd hub* && sudo ./install
+cd .. && rm -rf hub*
 echo "alias git=hub" >> ~/.bashrc
 
 # install Node Version Manager
@@ -29,7 +29,7 @@ nvm use 6.9.1
 
 # install ionic
 npm cache clean
-npm install -g cordova ionic@2.2.3
+npm install -g cordova@6.5.0 ionic@2.2.3
 
 # install the npm required packages
 npm install -g bower
