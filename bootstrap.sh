@@ -18,8 +18,9 @@ cd hub* && sudo ./install
 cd .. && rm -rf hub*
 echo "alias git=hub" >> ~/.bashrc
 
-# install Node Version Manager
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+# install latest Node Version Manager
+VERSION=$(curl -s https://api.github.com/repos/creationix/nvm/releases/latest | jq -r ".name")
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/$VERSION/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -41,9 +42,3 @@ cd /vagrant/moodlemobile2
 
 # add official repository as upstream
 git remote add upstream $OFFICIAL_GIT_REPO
-
-# install the npm plugins dependencies
-npm install
-
-# install javascript libraries
-bower install
