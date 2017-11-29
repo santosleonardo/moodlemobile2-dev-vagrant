@@ -8,6 +8,7 @@ git config --global user.name "Leonardo Santos"
 git config --global user.email leoss40@gmail.com
 
 # install JSON processor
+sudo apt-get update
 sudo apt-get install -y jq
 
 # install latest version of github hub and alias is as git
