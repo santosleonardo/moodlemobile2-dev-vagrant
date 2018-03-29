@@ -77,5 +77,6 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   #config.vm.provision "shell", name:"fix-locale", inline: "update-locale LC_CTYPE='en_US.UTF-8'"
+  config.vm.provision "shell", path: "bootstrap_root.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 end

@@ -7,10 +7,6 @@ FORKED_GIT_REPO='https://github.com/santosleonardo/moodlemobile2.git'
 git config --global user.name "Leonardo Santos"
 git config --global user.email leoss40@gmail.com
 
-# install JSON processor
-sudo apt-get update
-sudo apt-get install -y jq
-
 # install latest version of github hub and alias is as git
 HUB_DOWNLOAD_URL=$(curl -s https://api.github.com/repos/github/hub/releases/latest | jq -r ".assets[].browser_download_url" | grep linux-amd64)
 
@@ -32,10 +28,6 @@ nvm use 6.9.1
 # install ionic
 npm cache clean
 npm install -g cordova@6.5.0 ionic@2.2.3
-
-# install the npm required packages
-npm install -g bower
-npm install -g gulp
 
 # clone the app base code
 git clone $FORKED_GIT_REPO /vagrant/moodlemobile2
