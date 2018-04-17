@@ -10,7 +10,7 @@ sudo timedatectl set-timezone America/Sao_Paulo
 git config --global user.name "Leonardo Santos"
 git config --global user.email leoss40@gmail.com
 
-# install JSON processoe and requirements to run setup
+# install JSON processor and requirements to run setup
 sudo apt-get update
 sudo apt-get install -y jq python make g++
 
@@ -24,7 +24,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm install --lts
 nvm use --lts
 
-# install ionic
+# install node packages
 npm cache clean
 npm install -g cordova@6.5.0 ionic@2.2.3 bower gulp
 
