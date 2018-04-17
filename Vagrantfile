@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
+    #vb.memory = "1536"
     vb.name = "moodlemobile2-dev"
   end
   #
@@ -76,7 +76,5 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  #config.vm.provision "shell", name:"fix-locale", inline: "update-locale LC_CTYPE='en_US.UTF-8'"
-  config.vm.provision "shell", path: "bootstrap_root.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 end
