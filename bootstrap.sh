@@ -4,7 +4,7 @@ OFFICIAL_GIT_REPO='https://github.com/moodlehq/moodlemobile2.git'
 FORKED_GIT_REPO='https://github.com/santosleonardo/moodlemobile2.git'
 
 # set timezone
-timedatectl set-timezone America/Sao_Paulo
+sudo timedatectl set-timezone America/Sao_Paulo
 
 # configure git identity
 git config --global user.name "Leonardo Santos"

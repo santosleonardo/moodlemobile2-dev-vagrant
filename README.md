@@ -3,13 +3,12 @@
 The environment will be a virtualbox machine containing:
 * Ubuntu 16.04 LTS
 * Node Version Manager (nvm)
-* nodejs 6.9.1
+* nodejs LTS
 * npm
 * cordova
 * ionic
 * bower
 * gulp
-* [hub](https://hub.github.com/)
 
 ## Prerequisites
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -18,7 +17,7 @@ The environment will be a virtualbox machine containing:
 
 ## Usage
 Clone or download this repository.  
-Edit the FORKED_GIT_REPO variable in the bootstrap.sh file and put your own forked repository. Also edit git identity before `vagrant up`.  
+Edit the timezone and the FORKED_GIT_REPO variable in the bootstrap.sh file and put your own forked repository. Also edit git identity before `vagrant up`.  
 The commands (such as `npm run setup`) must be run inside VM.  
 
 ### References
