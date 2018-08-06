@@ -10,9 +10,10 @@ sudo timedatectl set-timezone America/Sao_Paulo
 git config --global user.name "Leonardo Santos"
 git config --global user.email leoss40@gmail.com
 
-# install JSON processor and requirements to run setup
+# install JSON processor, bc, imagemagick and requirements to run setup
 sudo apt-get update
 sudo apt-get install -y jq python make g++
+sudo apt-get install -y bc imagemagick
 
 # install latest Node Version Manager
 VERSION=$(curl -s https://api.github.com/repos/creationix/nvm/releases/latest | jq -r ".name")
@@ -26,7 +27,7 @@ nvm use --lts
 
 # install node packages
 npm cache clean
-npm install -g cordova@6.5.0 ionic@2.2.3 bower gulp
+npm install -g cordova ionic gulp
 
 # clone the app base code
 git clone $FORKED_GIT_REPO /vagrant/moodlemobile2
